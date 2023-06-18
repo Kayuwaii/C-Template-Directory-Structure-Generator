@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
             MakeDirectory(outpath);
 
             char makefilePath[270];
-            snprintf(makefilePath, sizeof(makefilePath), "%s/makefile", baseDirPath);
+            snprintf(makefilePath, sizeof(makefilePath), "%s/makefile", codepath);
             MakeFile(makefilePath, "#replace main for proper name\nmain:\n\tgcc -c libs/helpers.c -o libs/helpers.o\n\tgcc -c main.c -o main.o\n\tgcc -g main.o helpers/helpers.o -o main.run\n\trm -f libs/helpers.o\n\trm -f main.o\n\nmain-save:\n\tgcc -c libs/helpers.c -o libs/helpers.o\n\tgcc -c main.c -o main.o\n\tgcc main.o helpers/helpers.o -o main.run\n\tmv main.run output/main.run\n\trm -f libs/helpers.o\n\trm -f main.o\n");
 
             
