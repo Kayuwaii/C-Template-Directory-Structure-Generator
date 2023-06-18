@@ -6,14 +6,14 @@ This tool generates a directory and file structure specifically designed for C d
 
 To use this tool, compile the provided C code and run the generated executable with the desired project names as arguments:
 
-```bash
-make mkcodedir
-./mkcodedir project1 project2 project3
+```console
+foo@bar:~$ make mkcodedir
+foo@bar:~$ ./mkcodedir project1 project2 project3
 ```
 
 This will create directories for `project1`, `project2`, and `project3`, each with the following structure:
 
-```filesystem
+```bash
 project_name/
   ├── code/
   │   ├── libs/
